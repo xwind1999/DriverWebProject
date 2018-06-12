@@ -1,147 +1,123 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-	<title>Create New Account </title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=600px, initial-scale=1">
-	<!-- jQuery library -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Create New Account </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=600px, initial-scale=1">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-	<!-- Latest compiled JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<style>
-		.jumbotron{
-			padding: 15px 30px;
-		}
-
-		.homeButton{
-			font-size: 50px;
-			width: 200px;
-			height: 100px;
-			border-radius: 0px;
-		}
-
-		.contact{
-			position: fixed;
-			bottom: 1px;
-			right: 1px;
-		}
-
-		.row{
-			margin: 10px auto;
-		}
-
-		.container{
-			margin-top: 35px;
-			max-width: 45%;
-		}
-
-	</style>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
 </head>
+
 <body>
 
-	<div class="jumbotron">
-		<a class="btn btn-success homeButton text-center" href="login.html">HOME</a>
-	</div>
+    <div class="jumbotron">
+        <a class="btn btn-success homeButton text-center" href="login.html">HOME</a>
+    </div>
 
 
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-1"></div>
-		  	<div class="col-lg-10">
-				<label for="fname">Full Name:</label>
-				<input type="password" class="form-control" placeholder="full name" id="fname">
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label for="fname">Full Name:</label>
+                <input type="password" class="form-control" placeholder="full name" id="fname">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-		  	<div class="col-lg-10">
-				<label for="mail">Email:</label>
-				<input type="password" class="form-control" placeholder="email" id="mail">
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
-	
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-10">
-				<label for="pass">Password:</label>
-				<input type="password" class="form-control" placeholder="password" id="pass">
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label for="mail">Email:</label>
+                <input type="password" class="form-control" placeholder="email" id="mail">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-10">
-				<label for="repass">Re-type Password:</label>
-				<input type="password" class="form-control" placeholder="re-type password" id="repass">
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label for="pass">Password:</label>
+                <input type="password" class="form-control" placeholder="password" id="pass">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-			  <div class="col-lg-10">
-					<div class="checkbox">
-						<label class="radio-inline"><input type="radio" name="male">Male</label>
-						<label class="radio-inline"><input type="radio" name="female">Female</label>
-					</div>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label for="repass">Re-type Password:</label>
+                <input type="password" class="form-control" placeholder="re-type password" id="repass">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-10">
-				<label for="bdate">Birth Date:</label>
-				<input type="date" class="form-control" placeholder="birth date" id="bdate">
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <div class="checkbox">
+                    <label class="radio-inline"><input type="radio" name="male">Male</label>
+                    <label class="radio-inline"><input type="radio" name="female">Female</label>
+                </div>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-10">
-				<label class="checkbox-inline"><input type="checkbox" value="">Agree to license and privacy statement.</label>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label for="bdate">Birth Date:</label>
+                <input type="date" class="form-control" placeholder="birth date" id="bdate">
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-		<div class="row">
-			<div class="col-lg-1"></div>
-			<div class="col-lg-10">
-				<a href="#" class="btn btn-primary btn-block">Create New Account</a>
-			</div>
-			<div class="col-sm-1"></div>
-		</div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <label class="checkbox-inline"><input type="checkbox" value="">Agree to license and privacy statement.</label>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-	<div class="contact"><button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button></div>
+        <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-10">
+                <a href="login.html" class="btn btn-primary btn-block">Create New Account</a>
+            </div>
+            <div class="col-sm-1"></div>
+        </div>
 
-	<!-- Popup contact address (bs3-modal)-->
-	<div class="modal fade" id="contactModal">
-		<div class="modal-dialog modal-sm">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">Donate Thẻ Viettel</h4>
-				</div>
-				<div class="modal-body">
-					<label for="seri">Số seri:</label>
-					<input type="password" class="form-control" placeholder="password" id="seri"><br>
-					<label for="pass">Mã thẻ:</label>
-  					<input type="password" class="form-control" placeholder="password" id="pass">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="contact"><button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button></div>
+
+        <!-- Popup contact address (bs3-modal)-->
+        <div class="modal fade" id="contactModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Donate Thẻ Viettel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="seri">Số seri:</label>
+                        <input type="password" class="form-control" placeholder="password" id="seri"><br>
+                        <label for="pass">Mã thẻ:</label>
+                        <input type="password" class="form-control" placeholder="password" id="pass">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>

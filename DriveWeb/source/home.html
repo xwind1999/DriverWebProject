@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-    <title>Hello World</title>
+    <title>Password Recovery</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta name="viewport" content="width=600px, initial-scale=1">
@@ -15,60 +14,70 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+    <style>
+        .avatarDrop img {
+            position: relative;
+            bottom: 10px;
+            right: 12px;
+            width: 150%;
+            height: 150%;
+        }
+        
+        .avatarDrop {
+            width: 85px;
+            height: 85px;
+            border-radius: 20%;
+            overflow: hidden;
+        }
+        
+        .uploadButton button{
+            font-size: 30px;
+            width: 200px;
+            height: 70px;
+           
+            overflow: hidden;
+        }
+
+        .uploadButton{
+            position: relative;
+            top: 12px;
+
+            margin-right: 3%;
+        }
+    </style>
 
 </head>
 
 <body>
-
     <div class="jumbotron">
-        <a class="btn btn-success homeButton text-center" href="login.html">HOME</a>
+        <a class="btn btn-success homeButton text-center" href="home.html">HOME</a>
+
+
+
+        <div class="dropdown pull-right">
+            <button class="btn btn-primary-outline dropdown-toggle avatarDrop" type="button" data-toggle="dropdown"><img src="img/demo.jpg">
+           </button>
+            <ul class="dropdown-menu">
+                <li><a class="text-right" href="#">Account Settings</a></li>
+                <li><a class="text-right" href="login.html">Logout</a></li>
+
+            </ul>
+        </div>
+
+        <div class="dropdown pull-right uploadButton">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">UPLOAD</button>
+            <ul class="dropdown-menu">
+                <li><a class="text-left" href="#">Upload File</a></li>
+                <li><a class="text-left" href="#">Upload Folder</a></li>
+
+            </ul>
+        </div>
     </div>
 
 
+
+
     <div class="container">
-
-
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
-                <label for="mail">Email:</label>
-                <input type="password" class="form-control" placeholder="email" id="mail">
-            </div>
-            <div class="col-sm-1"></div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
-                <label for="pass">Password:</label>
-                <input type="password" class="form-control" placeholder="password" id="pass">
-            </div>
-            <div class="col-sm-1"></div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10"><a href="forgotPassword.html">Forgot password?</a></div>
-            <div class="col-lg-1"></div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-6"></div>
-            <div class="col-sm-4"><a href="home.html" class="btn btn-primary pull-right">LOGIN</a></div>
-            <div class="col-sm-1"></div>
-
-        </div>
-
-        <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10"><a href="signup.html" class="btn btn-primary btn-block">Create New Account</a></div>
-            <div class="col-sm-1"></div>
-
-        </div>
-
 
     </div>
 
@@ -96,9 +105,6 @@
             </div>
         </div>
     </div>
-
-
-
 </body>
 
 </html>

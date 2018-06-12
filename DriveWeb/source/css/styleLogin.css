@@ -1,0 +1,25 @@
+.jumbotron {
+    padding: 15px 30px;
+}
+
+.homeButton {
+    font-size: 50px;
+    width: 200px;
+    height: 85px;
+    border-radius: 0px;
+}
+
+.contact {
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+}
+
+.row {
+    margin: 10px auto;
+}
+
+.container {
+    margin-top: 35px;
+    max-width: 45%;
+}
