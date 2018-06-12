@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Welcome to </title>
+	<style>
+		a:link{
+			text-decoration: none;
+		}
+
+		.toolBar{
+			width: 100%;
+			height: 120px;
+			border: 1px solid black;
+		}
+
+		.homeButton{
+			width: 200px;
+			height: 118px;
+			border: 1px solid black;
+		}
+
+		#home{
+			font-size: 40px;
+			font-weight: bold;
+			font-family: Arial;
+
+		}
+
+		.homeButton{
+			color: black;
+			text-decoration: none;
+			text-align: center;
+		}
+
+		.signUpBox{
+			width: 270px;
+			height: 360px;
+			border: 1px solid black;
+			border-radius: 4px;
+			margin: 30px auto;
+			overflow: hidden;
+			box-shadow: 5px 5px #b8b894;
+
+		}
+
+		#fullName,#email,#password,#rePassword,#sex,#birthDate {
+			
+			margin: 20px 29px;
+		}
+
+		#email, #password{
+			font-size: 15px;
+		}
+
+		#forgotPassword a:hover, #createAcc a:hover{
+			color: purple;
+		}
+
+		#createAcc{
+			color:black;
+			text-align: center;
+			position: relative;
+			left: 9px;
+			margin: 12px 23px;
+			border: 1px solid black;
+			border-radius: 8px;
+			width: 200px;
+			box-shadow: 3px 3px #b8b894;
+
+
+		}
+
+		#createAcc:hover{
+			color: white;
+			background-color: #d6d6c2;
+		}
+
+
+		.contact{
+			color: black;
+			text-align: center;	
+			position: fixed;
+			right: 1px;
+			bottom: 1px;
+			width: 150px;
+			border: 1px solid black;
+		}
+
+
+
+		.contact:hover{
+			color: white;
+			background-color: #d6d6c2;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="toolBar">
+	<a id="home" href="login.html"><div class="homeButton"><p>HOME</p></div></a>
+
+	</div>
+
+	<div class="main">
+		<div class="signUpBox">
+			
+				<form action="/action_page.php">
+   					<div id="fullName"><input type="text" size="25" name="fullName" placeholder="full name"></div>
+   					<div id="email"><input type="password" size="25" name="email" placeholder="email"></div>
+   					<div id="password"><input type="password" size="25" name="password" placeholder="password"></div>
+   					<div id="rePassword"><input type="password" size="25" name="rePassword" placeholder="retype password"></div>
+   					<div id="sex"><input type="text" size="25" name="sex" placeholder="sex"></div>
+   					<div id="birthDate"><input type="text" size="25" name="birthDate" placeholder="birth date"></div>
+
+  					<a href="loginSuccess"><div id="createAcc"><p>Create Account</p></div></a>
+
+				</form>
+			
+			
+			
+
+		</div>
+	</div>
+
+	<a href="..."><div class="contact"><p>Contact Us</p></div></a>
+</body>
+</html>
