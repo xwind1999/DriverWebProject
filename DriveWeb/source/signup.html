@@ -2,127 +2,146 @@
 
 <html>
 <head>
-	<title>Welcome to </title>
+	<title>Create New Account </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=600px, initial-scale=1">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<style>
-		a:link{
-			text-decoration: none;
-		}
-
-		.toolBar{
-			width: 100%;
-			height: 120px;
-			border: 1px solid black;
+		.jumbotron{
+			padding: 15px 30px;
 		}
 
 		.homeButton{
+			font-size: 50px;
 			width: 200px;
-			height: 118px;
-			border: 1px solid black;
+			height: 100px;
+			border-radius: 0px;
 		}
-
-		#home{
-			font-size: 40px;
-			font-weight: bold;
-			font-family: Arial;
-
-		}
-
-		.homeButton{
-			color: black;
-			text-decoration: none;
-			text-align: center;
-		}
-
-		.signUpBox{
-			width: 270px;
-			height: 360px;
-			border: 1px solid black;
-			border-radius: 4px;
-			margin: 30px auto;
-			overflow: hidden;
-			box-shadow: 5px 5px #b8b894;
-
-		}
-
-		#fullName,#email,#password,#rePassword,#sex,#birthDate {
-			
-			margin: 20px 29px;
-		}
-
-		#email, #password{
-			font-size: 15px;
-		}
-
-		#forgotPassword a:hover, #createAcc a:hover{
-			color: purple;
-		}
-
-		#createAcc{
-			color:black;
-			text-align: center;
-			position: relative;
-			left: 9px;
-			margin: 12px 23px;
-			border: 1px solid black;
-			border-radius: 8px;
-			width: 200px;
-			box-shadow: 3px 3px #b8b894;
-
-
-		}
-
-		#createAcc:hover{
-			color: white;
-			background-color: #d6d6c2;
-		}
-
 
 		.contact{
-			color: black;
-			text-align: center;	
 			position: fixed;
-			right: 1px;
 			bottom: 1px;
-			width: 150px;
-			border: 1px solid black;
+			right: 1px;
 		}
 
-
-
-		.contact:hover{
-			color: white;
-			background-color: #d6d6c2;
+		.row{
+			margin: 10px auto;
 		}
-		
+
+		.container{
+			margin-top: 35px;
+			max-width: 45%;
+		}
+
 	</style>
 </head>
 <body>
-	<div class="toolBar">
-	<a id="home" href="login.html"><div class="homeButton"><p>HOME</p></div></a>
 
+	<div class="jumbotron">
+		<a class="btn btn-success homeButton text-center" href="login.html">HOME</a>
 	</div>
 
-	<div class="main">
-		<div class="signUpBox">
-			
-				<form action="/action_page.php">
-   					<div id="fullName"><input type="text" size="25" name="fullName" placeholder="full name"></div>
-   					<div id="email"><input type="password" size="25" name="email" placeholder="email"></div>
-   					<div id="password"><input type="password" size="25" name="password" placeholder="password"></div>
-   					<div id="rePassword"><input type="password" size="25" name="rePassword" placeholder="retype password"></div>
-   					<div id="sex"><input type="text" size="25" name="sex" placeholder="sex"></div>
-   					<div id="birthDate"><input type="text" size="25" name="birthDate" placeholder="birth date"></div>
 
-  					<a href="loginSuccess"><div id="createAcc"><p>Create Account</p></div></a>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-1"></div>
+		  	<div class="col-lg-10">
+				<label for="fname">Full Name:</label>
+				<input type="password" class="form-control" placeholder="full name" id="fname">
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
 
-				</form>
-			
-			
-			
+		<div class="row">
+			<div class="col-lg-1"></div>
+		  	<div class="col-lg-10">
+				<label for="mail">Email:</label>
+				<input type="password" class="form-control" placeholder="email" id="mail">
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+	
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<label for="pass">Password:</label>
+				<input type="password" class="form-control" placeholder="password" id="pass">
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
 
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<label for="repass">Re-type Password:</label>
+				<input type="password" class="form-control" placeholder="re-type password" id="repass">
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-1"></div>
+			  <div class="col-lg-10">
+					<div class="checkbox">
+						<label class="radio-inline"><input type="radio" name="male">Male</label>
+						<label class="radio-inline"><input type="radio" name="female">Female</label>
+					</div>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<label for="bdate">Birth Date:</label>
+				<input type="date" class="form-control" placeholder="birth date" id="bdate">
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<label class="checkbox-inline"><input type="checkbox" value="">Agree to license and privacy statement.</label>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-1"></div>
+			<div class="col-lg-10">
+				<a href="#" class="btn btn-primary btn-block">Create New Account</a>
+			</div>
+			<div class="col-sm-1"></div>
+		</div>
+
+	<div class="contact"><button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button></div>
+
+	<!-- Popup contact address (bs3-modal)-->
+	<div class="modal fade" id="contactModal">
+		<div class="modal-dialog modal-sm">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Donate Thẻ Viettel</h4>
+				</div>
+				<div class="modal-body">
+					<label for="seri">Số seri:</label>
+					<input type="password" class="form-control" placeholder="password" id="seri"><br>
+					<label for="pass">Mã thẻ:</label>
+  					<input type="password" class="form-control" placeholder="password" id="pass">
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
 		</div>
 	</div>
-
-	<a href="..."><div class="contact"><p>Contact Us</p></div></a>
 </body>
 </html>
