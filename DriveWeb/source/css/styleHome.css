@@ -31,13 +31,13 @@
 }
 
 .well {
-    background-color: white;
+    background: 0%;
 }
 
-.button a{
+.button a {
     color: white;
 }
 
-.imgCenter{
+.imgCenter {
     margin: 0 auto;
 }

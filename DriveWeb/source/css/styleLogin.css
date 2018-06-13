@@ -30,6 +30,9 @@
 }
 .border-draw {
     border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 3px 3px grey;   
+    border-radius: 3px; 
+}
+.center-item {
+    width: fit-content;
+    height: fit-content;
 }
