@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -184,4 +185,195 @@
     </div>
 </body>
 
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=600px, initial-scale=1">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/styleHome.css">
+
+
+</head>
+
+<body>
+    <div class="jumbotron">
+        <a href="home.html">
+            <img src="img/logo1.png" class="img-rounded" width="140px" height="90px" alt="Cinque Terre">
+        </a>
+        <div class="dropdown pull-right" item-width="40px" item-height="40px">
+            <button class="btn dropdown-toggle avatarDrop" type="button" data-toggle="dropdown">
+                <img src="img/demo.jpg">
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="text-right" href="accountsettings.html">Account Settings</a>
+                </li>
+                <li>
+                    <a class="text-right" href="login.html">Logout</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="dropdown pull-right uploadButton">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">UPLOAD</button>
+            <ul class="dropdown-menu">
+                <li><a class="text-left" data-toggle="modal" href='#modalUploadFile'>Upload File</a></li>
+                <li><a class="text-left" data-toggle="modal" href='#modalUploadFolder'>Upload Folder</a></li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="well border-draw">
+                    <ul>
+                        <li><a href="#">Folder1</a></li>
+                        <li><a href="#">Folder2</a></li>
+                        <li><a href="#">Folder3</a></li>
+                        <li><a href="#">Folder4</a></li>
+                        <li><a href="#">Folder5</a></li>
+                        <li><a href="#">Folder6</a></li>
+                        <li><a href="#">Folder7</a></li>
+                        <li><a href="#">Folder8</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-9 ">
+                <div class="well border-draw">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contact">
+        <button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button>
+    </div>
+
+    <!-- Popup contact address (bs3-modal)-->
+    <div class="modal fade" id="contactModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Donate Thẻ Viettel</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="seri">Số seri:</label>
+                    <input type="password" class="form-control" placeholder="password" id="seri">
+                    <br>
+                    <label for="pass">Mã thẻ:</label>
+                    <input type="password" class="form-control" placeholder="password" id="pass">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal upload file-->
+    <div class="modal fade" id="modalUploadFile">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Upload File</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="false">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal upload folder-->
+    <div class="modal fade" id="modalUploadFolder">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Upload Folder</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="file-loading">
+                        <input id="input-folder-3" name="input-folder-3[]" type="file" multiple>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Upload</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+>>>>>>> Change logo, Change login background, Remove home background, Add space between well-class in home and account settings, Add some new background image and 2 logo style in img folder, Add class img-responsive to background
 </html>

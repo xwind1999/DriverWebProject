@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 
@@ -173,4 +174,188 @@
 
             </body>
 
+=======
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=600px, initial-scale=1">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/styleHome.css">
+</head>
+
+<body background="img/background.png">
+    <div class="jumbotron">
+        <a href="home.html">
+            <img src="img/logo1.png" class="img-rounded" width="140px" height="90px" alt="Cinque Terre">
+        </a>
+        <div class="dropdown pull-right">
+            <button class="btn btn-primary-outline dropdown-toggle avatarDrop" type="button" data-toggle="dropdown"><img src="img/demo.jpg">
+                   </button>
+            <ul class="dropdown-menu">
+                <li><a class="text-right" href="#">Account Settings</a></li>
+                <li><a class="text-right" href="login.html">Logout</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="well border-draw">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="fname">Full Name:</label>
+                            <input type="password" class="form-control" placeholder="full name" id="fname">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="mail">Email:</label>
+                            <input type="password" class="form-control" placeholder="email" id="mail">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="form-group">
+                                <label for="sex">Sex:</label>
+                                <select class="form-control" id="sex">
+                                <option> </option>
+                                <option>Male</option>
+                                <option>Female</option>
+                            </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="bdate">Birth Date:</label>
+                            <input type="date" class="form-control" placeholder="birth date" id="bdate">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6"></div>
+                        <div class="col-sm-4"><a href="#" class="btn btn-primary pull-right">Apply Changes</a></div>
+                        <div class="col-sm-1"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="well border-draw">
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="pass">Old Password:</label>
+                            <input type="password" class="form-control" placeholder="old password" id="pass">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="pass">New Password:</label>
+                            <input type="password" class="form-control" placeholder="new password" id="pass">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <label for="repass">Re-type Password:</label>
+                            <input type="password" class="form-control" placeholder="re-type password" id="repass">
+                        </div>
+                        <div class="col-sm-1"></div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6"></div>
+                        <div class="col-sm-4"><a href="#" class="btn btn-primary pull-right">Apply Changes</a></div>
+                        <div class="col-sm-1"></div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 center-item">
+                <div class="well border-draw">
+                    <img class="imgCenter img-rounded" src="img/demo.jpg" style="width: 80%; height: 80%;">
+
+                    <label for="chooser">Change Avatar: </label>
+
+                    <input id="chooser" name="chooser" type="file" class="file" data-show-preview="false">
+
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-6"></div>
+                        <div class="col-sm-4"><a href="#" class="btn btn-primary pull-right">Apply Changes</a></div>
+                        <div class="col-sm-1"></div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="contact"><button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button></div>
+
+        <!-- Popup contact address (bs3-modal)-->
+        <div class="modal fade" id="contactModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Donate Thẻ Viettel</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="seri">Số seri:</label>
+                        <input type="password" class="form-control" placeholder="password" id="seri"><br>
+                        <label for="pass">Mã thẻ:</label>
+                        <input type="password" class="form-control" placeholder="password" id="pass">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+</body>
+
+>>>>>>> Change logo, Change login background, Remove home background, Add space between well-class in home and account settings, Add some new background image and 2 logo style in img folder, Add class img-responsive to background
 </html>
