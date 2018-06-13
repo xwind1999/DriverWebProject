@@ -2,10 +2,12 @@
 <html>
 
 <head>
-    <title>Password Recovery</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Home</title>
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=600px, initial-scale=1">
+    <meta name="viewport"
+        content="width=600px, initial-scale=1">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -13,35 +15,36 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="css/styleLogin.css">
     <style>
         .avatarDrop img {
             position: relative;
             bottom: 10px;
-            right: 12px;
-            width: 150%;
-            height: 150%;
+            right: 30%;
+            width: 160%;
+            height: 160%;
         }
-        
+
         .avatarDrop {
-            width: 85px;
-            height: 85px;
-            border-radius: 20%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             overflow: hidden;
         }
-        
-        .uploadButton button{
+
+        .uploadButton button {
             font-size: 30px;
             width: 200px;
             height: 70px;
-           
+
             overflow: hidden;
         }
 
-        .uploadButton{
+        .uploadButton {
             position: relative;
             top: 12px;
-
             margin-right: 3%;
         }
     </style>
@@ -50,25 +53,47 @@
 
 <body>
     <div class="jumbotron">
-        <a class="btn btn-success homeButton text-center" href="home.html">HOME</a>
-
-
-
-        <div class="dropdown pull-right">
-            <button class="btn btn-primary-outline dropdown-toggle avatarDrop" type="button" data-toggle="dropdown"><img src="img/demo.jpg">
-           </button>
+        <a href="home.html">
+            <img src="img/log.jpg"
+                class="img-rounded"
+                width="160px"
+                height="90px"
+                alt="Cinque Terre">
+        </a>
+        <div class="dropdown pull-right"
+            item-width="40px"
+            item-height="40px">
+            <button class="btn dropdown-toggle avatarDrop"
+                type="button"
+                data-toggle="dropdown">
+                <img src="img/demo.jpg">
+            </button>
             <ul class="dropdown-menu">
-                <li><a class="text-right" href="#">Account Settings</a></li>
-                <li><a class="text-right" href="login.html">Logout</a></li>
+                <li>
+                    <a class="text-right"
+                        href="#">Account Settings</a>
+                </li>
+                <li>
+                    <a class="text-right"
+                        href="login.html">Logout</a>
+                </li>
 
             </ul>
         </div>
 
         <div class="dropdown pull-right uploadButton">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">UPLOAD</button>
+            <button class="btn btn-primary dropdown-toggle"
+                type="button"
+                data-toggle="dropdown">UPLOAD</button>
             <ul class="dropdown-menu">
-                <li><a class="text-left" href="#">Upload File</a></li>
-                <li><a class="text-left" href="#">Upload Folder</a></li>
+                <li>
+                    <a class="text-left"
+                        href="#">Upload File</a>
+                </li>
+                <li>
+                    <a class="text-left"
+                        href="#">Upload Folder</a>
+                </li>
 
             </ul>
         </div>
@@ -82,25 +107,45 @@
     </div>
 
 
-    <div class="contact"><button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button></div>
+    <div class="contact">
+        <button type="button"
+            class="btn btn-info btn-md"
+            data-toggle="modal"
+            href='#contactModal'>Contact Us</button>
+    </div>
 
     <!-- Popup contact address (bs3-modal)-->
-    <div class="modal fade" id="contactModal">
+    <div class="modal fade"
+        id="contactModal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Donate Thẻ Viettel</h4>
                 </div>
                 <div class="modal-body">
                     <label for="seri">Số seri:</label>
-                    <input type="password" class="form-control" placeholder="password" id="seri"><br>
+                    <input type="password"
+                        class="form-control"
+                        placeholder="password"
+                        id="seri">
+                    <br>
                     <label for="pass">Mã thẻ:</label>
-                    <input type="password" class="form-control" placeholder="password" id="pass">
+                    <input type="password"
+                        class="form-control"
+                        placeholder="password"
+                        id="pass">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal">Send</button>
+                    <button type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
