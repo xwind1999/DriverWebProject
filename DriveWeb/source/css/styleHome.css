@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .avatarDrop img {
     position: relative;
     bottom: 10px;
@@ -41,3 +42,48 @@
 .imgCenter {
     margin: 0 auto;
 }
+=======
+.avatarDrop img {
+    position: relative;
+    bottom: 10px;
+    right: 12px;
+    width: 150%;
+    height: 150%;
+}
+
+.avatarDrop {
+    width: 85px;
+    height: 85px;
+    border-radius: 20%;
+    overflow: hidden;
+}
+
+.uploadButton button {
+    font-size: 30px;
+    width: 200px;
+    height: 70px;
+    overflow: hidden;
+}
+
+.uploadButton {
+    position: relative;
+    top: 12px;
+    margin-right: 3%;
+}
+
+.fileList {
+    list-style-type: none;
+}
+
+.well {
+    background: 0%;
+}
+
+.button a {
+    color: white;
+}
+
+.imgCenter {
+    margin: 0 auto;
+}
+>>>>>>> Change logo, Change login background, Remove home background, Add space between well-class in home and account settings, Add some new background image and 2 logo style in img folder, Add class img-responsive to background

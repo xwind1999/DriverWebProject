@@ -28,11 +28,28 @@
     max-width: 45%;
     padding: 2% 0;
 }
+<<<<<<< HEAD
 .border-draw {
     border: 1px solid black;
     border-radius: 3px; 
 }
+=======
+
+.border-draw {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+>>>>>>> Change logo, Change login background, Remove home background, Add space between well-class in home and account settings, Add some new background image and 2 logo style in img folder, Add class img-responsive to background
 .center-item {
     width: fit-content;
     height: fit-content;
 }
+<<<<<<< HEAD
+=======
+
+body {
+    background: url("img/background01.jpg") no-repeat fixed center;
+    background-size: cover;
+}
+>>>>>>> Change logo, Change login background, Remove home background, Add space between well-class in home and account settings, Add some new background image and 2 logo style in img folder, Add class img-responsive to background
