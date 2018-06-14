@@ -4,17 +4,50 @@
 
 <head>
     <title>Login</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="utf-8">
-    <meta name="viewport" content="width=600px, initial-scale=1">
+    <meta name="viewport"
+        content="width=600px, initial-scale=1">
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+    <script> 
+        var emailEntered;
+        var passEntered;
+        function getInfo() {
+            var userEmail = document.getElementById("txtEmail");
+            var userPassword = document.getElementById("txtPass");
+            if (userEmail.value === "") {
+                document.getElementById("username_err").style.display = "block";
+                document.getElementById("username_err").innerHTML = "*Enter Email";
+                emailEntered = true;
+            } else if (userPassword.value === "") {
+                document.getElementById("pass_err").style.display = "block";
+                document.getElementById("pass_err").innerHTML = "*Enter Pass";
+                passEntered = true;
+            } else {
+                window.location = "home.html";
+            }
+        }
+        function inputHover(input, check) {
+            if(check) {
+                document.getElementById(input).style.display = "none";
+            }
+        }
+    </script>
 
-    <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
+    <link rel="stylesheet"
+        type="text/css"
+        href="css/styleLogin.css">
 
     <style>
         body {
@@ -27,7 +60,11 @@
 <body>
     <div class="jumbotron">
         <a href="login.html">
-            <img src="img/logo1.png" class="img-rounded" width="140px" height="90px" alt="Cinque Terre">
+            <img src="img/logo1.png"
+                class="img-responsive img-rounded"
+                width="140px"
+                height="90px"
+                alt="Cinque Terre">
         </a>
     </div>
     <div class="container border-draw">
@@ -35,7 +72,13 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="mail">Email:</label>
-                <input type="password" class="form-control" placeholder="email" id="mail">
+                <input type="text"
+                    onfocus="inputHover('username_err',emailEntered)"
+                    class="form-control"
+                    placeholder="email"
+                    id="txtEmail">
+                <span id="username_err"
+                    class="error"></span>
             </div>
             <div class="col-sm-1"></div>
 
@@ -45,7 +88,13 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="pass">Password:</label>
-                <input type="password" class="form-control" placeholder="password" id="pass">
+                <input type="password"
+                    class="form-control"
+                    placeholder="password"
+                    onfocus="inputHover('pass_err',passEntered)"
+                    id="txtPass">
+                <span id="pass_err"
+                    class="error"></span>
             </div>
             <div class="col-sm-1"></div>
 
@@ -61,9 +110,11 @@
 
         <div class="row">
             <div class="col-lg-1"></div>
-            <div class="col-lg-6"></div>
+            <div class="col-lg-6">
+            </div>
             <div class="col-sm-4">
-                <a href="home.html" class="btn btn-primary pull-right">LOGIN</a>
+                <a class="btn btn-primary pull-right"
+                    onclick="getInfo()">LOGIN</a>
             </div>
             <div class="col-sm-1"></div>
 
@@ -84,27 +135,44 @@
 
 
     <div class="contact">
-        <button type="button" class="btn btn-info btn-md contact-item" data-toggle="modal" href='#contactModal'>Contact Us</button>
+        <button type="button"
+            class="btn btn-info btn-md contact-item"
+            data-toggle="modal"
+            href='#contactModal'>Contact Us</button>
     </div>
 
     <!-- Popup contact address (bs3-modal)-->
-    <div class="modal fade" id="contactModal">
+    <div class="modal fade"
+        id="contactModal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <button type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-hidden="true">&times;</button>
                     <h4 class="modal-title">Donate Thẻ Viettel</h4>
                 </div>
                 <div class="modal-body">
                     <label for="seri">Số seri:</label>
-                    <input type="text" class="form-control" placeholder="Số seri" id="seri">
+                    <input type="password"
+                        class="form-control"
+                        placeholder="Số seri"
+                        id="seri">
                     <br>
                     <label for="pass">Mã thẻ:</label>
-                    <input type="text" class="form-control" placeholder="Mã thẻ" id="pass">
+                    <input type="password"
+                        class="form-control"
+                        placeholder="Mã thẻ"
+                        id="pass">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button"
+                        class="btn btn-primary"
+                        data-dismiss="modal">Send</button>
+                    <button type="button"
+                        class="btn btn-default"
+                        data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
