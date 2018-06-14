@@ -15,7 +15,13 @@
 
     <link rel="stylesheet" type="text/css" href="css/styleLogin.css">
     <link rel="stylesheet" type="text/css" href="css/styleHome.css">
-
+    <style>
+        .tool {
+            position: relative;
+            top: 49px;
+            margin-right: 3%;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,6 +52,10 @@
 
             </ul>
         </div>
+
+        <div id="toolBar" class="pull-right tool"></div>
+       
+        
     </div>
 
 
@@ -56,69 +66,51 @@
 
             <div class="col-lg-3">
                 <div class="well border-draw">
-                    <ul>
-                        <li><a href="#">Folder1</a></li>
-                        <li><a href="#">Folder2</a></li>
-                        <li><a href="#">Folder3</a></li>
-                        <li><a href="#">Folder4</a></li>
-                        <li><a href="#">Folder5</a></li>
-                        <li><a href="#">Folder6</a></li>
-                        <li><a href="#">Folder7</a></li>
-                        <li><a href="#">Folder8</a></li>
-                    </ul>
+                    <p id="folderList"></p>
+                    <script>
+                        text = "<ul>";
+                        for (i = 0; i < 8; i++) {
+                            text += "<li>" + "<a href='#'>Folder" + (i + 1) + "</a>" + "</li>";
+                        }
+                        text += "</ul>";
+                        document.getElementById("folderList").innerHTML = text;
+                    </script>
                 </div>
 
             </div>
             <div class="col-lg-9">
                 <div class="well border-draw">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="img/fileic.jpg" width="100" height="100">
-                                    <div class="caption text-center">
-                                        <p>TokudaBlog.html</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="img/fileic.jpg" width="100" height="100">
-                                    <div class="caption text-center">
-                                        <p>TokudaBlog.html</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="img/fileic.jpg" width="100" height="100">
-                                    <div class="caption text-center">
-                                        <p>TokudaBlog.html</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="thumbnail">
-                                <a href="#">
-                                    <img src="img/fileic.jpg" width="100" height="100">
-                                    <div class="caption text-center">
-                                        <p>TokudaBlog.html</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
+                    <div id="fileList" class="row">
+                        <script>
+                            text = "<ul class='list-inline'>";
+                            for (i = 0; i < 20; i++) {
+                                text += "<li><div onclick='showTools()' class='thumbnail click'>\
+                                <a href='#'>\
+                                    <img src='img/fileic.jpg' width='100' height='100'>\
+                                    <div class='caption text-center'><p>TokudaBlog.html</p></div></a></div></li>";
+                            }
+                            text += "</ul>";
+                            document.getElementById("fileList").innerHTML = text;
 
+                            function showTools() {
+                                text = "<div class='btn-toolbar' role='toolbar' aria-label='Toolbar with button groups'>\
+                                    <div class='btn-group mr-2' role='group' aria-label='First group'>\
+                                        <button type='button' class='btn btn-secondary'>Download</button>\
+                                    </div>\
+                                    <div class='btn-group mr-2' role='group' aria-label='Second group'>\
+                                        <button type='button' class='btn btn-secondary'>Rename</button>\
+                                        <button type='button' class='btn btn-secondary'>Copy</button>\
+                                        <button type='button' class='btn btn-secondary'>Cut</button>\
+                                        <button type='button' class='btn btn-secondary'>Paste</button>\
+                                        <button type='button' class='btn btn-secondary'>Delete</button>\
+                                    </div>\
+                                    </div>";
+                                document.getElementById("toolBar").innerHTML = text;
+                            }
+                        </script>
                     </div>
                 </div>
-
-
             </div>
-
         </div>
     </div>
 
@@ -127,28 +119,6 @@
         <button type="button" class="btn btn-info btn-md" data-toggle="modal" href='#contactModal'>Contact Us</button>
     </div>
 
-    <!-- Popup contact address (bs3-modal)-->
-    <div class="modal fade" id="contactModal">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Donate Thẻ Viettel</h4>
-                </div>
-                <div class="modal-body">
-                    <label for="seri">Số seri:</label>
-                    <input type="password" class="form-control" placeholder="password" id="seri">
-                    <br>
-                    <label for="pass">Mã thẻ:</label>
-                    <input type="password" class="form-control" placeholder="password" id="pass">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- modal upload file-->
     <div class="modal fade" id="modalUploadFile">
@@ -169,28 +139,47 @@
         </div>
     </div>
 
-    <!-- Popup contact address (bs3-modal)-->
-    <div class="modal fade" id="contactModal">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">Donate Thẻ Viettel</h4>
-                    </div>
-                    <div class="modal-body">
-                        <label for="seri">Serial Number:</label>
-                        <input type="text" class="form-control" placeholder="Số seri" id="seri">
-                        <br>
-                        <label for="pass">Mã thẻ:</label>
-                        <input type="text" class="form-control" placeholder="Mã thẻ" id="pass">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    </div>
+    <!-- modal upload folder-->
+    <div class="modal fade" id="modalUploadFolder">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Upload Folder</h4>
+                </div>
+                <div class="modal-body">
+                    <input id="input-b2" name="input-b2" type="file" class="file" data-show-preview="false">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Upload</button>
                 </div>
             </div>
         </div>
+    </div>
+
+    <!-- Popup contact address (bs3-modal)-->
+    <div class="modal fade" id="contactModal">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Donate Thẻ Viettel</h4>
+                </div>
+                <div class="modal-body">
+                    <label for="seri">Serial Number:</label>
+                    <input type="text" class="form-control" placeholder="Số seri" id="seri">
+                    <br>
+                    <label for="pass">Mã thẻ:</label>
+                    <input type="text" class="form-control" placeholder="Mã thẻ" id="pass">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
