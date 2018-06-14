@@ -24,11 +24,17 @@
         var emailEntered;
         var passEntered;
         function getInfo() {
+            //validate input
             var userEmail = document.getElementById("txtEmail");
             var userPassword = document.getElementById("txtPass");
             if (userEmail.value === "") {
                 document.getElementById("username_err").style.display = "block";
                 document.getElementById("username_err").innerHTML = "*Enter Email";
+                if (userPassword.value === "") {
+                    document.getElementById("pass_err").style.display = "block";
+                    document.getElementById("pass_err").innerHTML = "*Enter Pass";
+                    passEntered = true;
+                }
                 emailEntered = true;
             } else if (userPassword.value === "") {
                 document.getElementById("pass_err").style.display = "block";
@@ -39,6 +45,7 @@
             }
         }
         function inputHover(input, check) {
+            //validate when error for 'input' occurs
             if(check) {
                 document.getElementById(input).style.display = "none";
             }
