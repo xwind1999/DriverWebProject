@@ -19,7 +19,74 @@
             background: url("img/background01.jpg") no-repeat fixed center;
             background-size: cover;
         }
+        .error{
+        	color: red;
+        }
     </style>
+    <script> 
+        var fullNameEntered;
+        var emailEntered;
+        var passwordEntered;
+        var reTypePasswordEntered;
+        var sexChoiceEntered;
+        var dateOfBirthEntered;
+        var checkAgreementEntered;
+    	   function getInfo() {
+            //validate input
+            var fullName = document.getElementById("txtFullName");
+            var userEmail = document.getElementById("txtEmail");
+            var password = document.getElementById("txtPassword");
+            var reTypePassword = document.getElementById("txtReTypePassword");
+            var sexChoice = document.getElementById("txtSexChoice");
+            var dateOfBirth = document.getElementById("txtDateOfBirth");
+            var checkAgreement = document.getElementById("txtCheckAgreement");
+            if (fullName.value === "") {
+                document.getElementById("fullname_err").style.display = "block";
+                document.getElementById("fullname_err").innerHTML = "*Full Name cannot be  null"; 
+                fullNameEntered = true;
+            } 
+            else if(userEmail.value===""){
+            	document.getElementById("email_err").style.display = "block";
+            	document.getElementById("email_err").innerHTML = "*Email cannot be null";
+            	emailEntered = true;
+            }
+            else if(password.value.length < 8){
+            	document.getElementById("password_err").style.display = "block";
+            	document.getElementById("password_err").innerHTML = "*Password must at least 8 characters";
+            	passwordEntered = true;
+            }
+            else if(reTypePassword.value!=password.value){
+            	document.getElementById("reTypePassword_err").style.display= "block";
+            	document.getElementById("reTypePassword_err").innerHTML = "*This field has to be the same to the Password Field";
+            	reTypePasswordEntered = true;
+            }
+            else if(sexChoice.value.length < 2){
+            	document.getElementById("sexChoice_err").style.display= "block";
+            	document.getElementById("sexChoice_err").innerHTML = "*You have to choose your gender";
+            	sexChoiceEntered = true;
+            }
+            else if (dateOfBirth.value.length == 0){
+            	document.getElementById("dateOfBirth_err").style.display = "block";
+            	document.getElementById("dateOfBirth_err").innerHTML = "You have to enter your data of birth";
+            	dateOfBirthEntered = true;
+            }
+            else if(!(checkAgreement.checked)){
+            	document.getElementById("checkAgreement_err").style = "block";
+            	document.getElementById("checkAgreement_err").innerHTML = "You have to agree to the license";
+            	checkAgreementEntered = true;
+            }
+            else {
+            	alert("Sign up successfully!!")
+                window.location = "login.html";
+            }
+        }
+        function inputHover(input, check) {
+            //validate when error for 'input' occurs
+            if(check) {
+                document.getElementById(input).style.display = "none";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -35,7 +102,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="fname">Full Name:</label>
-                <input type="password" class="form-control" placeholder="full name" id="fname">
+                <input type="text" onfocus="inputHover('fullname_err',fullNameEntered)" class="form-control" placeholder="full name" id="txtFullName">
+                <span id = "fullname_err" class = "error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -44,7 +112,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="mail">Email:</label>
-                <input type="password" class="form-control" placeholder="email" id="mail">
+                <input type="text" onfocus ="inputHover('email_err',emailEntered)" class="form-control" placeholder="email" id="txtEmail">
+                <span id = "email_err" class="error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -53,7 +122,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="pass">Password:</label>
-                <input type="password" class="form-control" placeholder="password" id="pass">
+                <input type="password" onfocus="inputHover('password_err',passwordEntered )"class="form-control" placeholder="password" id="txtPassword">
+                <span id = "password_err" class="error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -62,7 +132,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="repass">Re-type Password:</label>
-                <input type="password" class="form-control" placeholder="re-type password" id="repass">
+                <input type="password" onfocus="inputHover('reTypePassword_err',reTypePasswordEntered)" class="form-control" placeholder="re-type password" id="txtReTypePassword">
+                <span id = "reTypePassword_err" class="error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -72,11 +143,12 @@
             <div class="col-lg-10">
                 <div class="form-group">
                     <label for="sex">Sex:</label>
-                    <select class="form-control" id="sex">
-                            <option> </option>
+                    <select class="form-control" id="txtSexChoice" onfocus="inputHover('sexChoice_err',sexChoiceEntered)">
+                            <option></option>
                             <option>Male</option>
                             <option>Female</option>
                         </select>
+                         <span id = "sexChoice_err" class="error"></span>
                 </div>
             </div>
             <div class="col-sm-1"></div>
@@ -86,7 +158,8 @@
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
                 <label for="bdate">Birth Date:</label>
-                <input type="date" class="form-control" placeholder="birth date" id="bdate">
+                <input onfocus="inputHover('dateOfBirth_err',dateOfBirthEntered)" type="date" class="form-control" placeholder="birth date" id="txtDateOfBirth">
+                <span id = 'dateOfBirth_err' class="error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -94,7 +167,8 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
-                <label class="checkbox-inline"><input type="checkbox" value="">Agree to license and privacy statement.</label>
+                <label class="checkbox-inline"><input onfocus="inputHover('checkAgreement_err',checkAgreementEntered)" type="checkbox" id= "txtCheckAgreement">Agree to license and privacy statement.</label><br>
+                 <span id = "checkAgreement_err" class="error"></span>
             </div>
             <div class="col-sm-1"></div>
         </div>
@@ -102,7 +176,7 @@
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
-                <a href="login.html" class="btn btn-primary btn-block">Create New Account</a>
+                <a  onclick="getInfo()" class="btn btn-primary btn-block">Create New Account</a>
             </div>
             <div class="col-sm-1"></div>
         </div>
