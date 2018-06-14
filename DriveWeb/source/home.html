@@ -53,62 +53,69 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-3 well border-draw">
-                <ul>
-                    <li><a href="#">Folder1</a></li>
-                    <li><a href="#">Folder2</a></li>
-                    <li><a href="#">Folder3</a></li>
-                    <li><a href="#">Folder4</a></li>
-                    <li><a href="#">Folder5</a></li>
-                    <li><a href="#">Folder6</a></li>
-                    <li><a href="#">Folder7</a></li>
-                    <li><a href="#">Folder8</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-9 well border-draw">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="img/fileic.jpg" width="100" height="100">
-                                <div class="caption text-center">
-                                    <p>TokudaBlog.html</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="img/fileic.jpg" width="100" height="100">
-                                <div class="caption text-center">
-                                    <p>TokudaBlog.html</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="img/fileic.jpg" width="100" height="100">
-                                <div class="caption text-center">
-                                    <p>TokudaBlog.html</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="thumbnail">
-                            <a href="#">
-                                <img src="img/fileic.jpg" width="100" height="100">
-                                <div class="caption text-center">
-                                    <p>TokudaBlog.html</p>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
 
+            <div class="col-lg-3">
+                <div class="well border-draw">
+                    <ul>
+                        <li><a href="#">Folder1</a></li>
+                        <li><a href="#">Folder2</a></li>
+                        <li><a href="#">Folder3</a></li>
+                        <li><a href="#">Folder4</a></li>
+                        <li><a href="#">Folder5</a></li>
+                        <li><a href="#">Folder6</a></li>
+                        <li><a href="#">Folder7</a></li>
+                        <li><a href="#">Folder8</a></li>
+                    </ul>
                 </div>
+
+            </div>
+            <div class="col-lg-9">
+                <div class="well border-draw">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="thumbnail">
+                                <a href="#">
+                                    <img src="img/fileic.jpg" width="100" height="100">
+                                    <div class="caption text-center">
+                                        <p>TokudaBlog.html</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
 
             </div>
 
@@ -162,26 +169,28 @@
         </div>
     </div>
 
-    <!-- modal upload folder-->
-    <div class="modal fade" id="modalUploadFolder">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Upload Folder</h4>
-                </div>
-                <div class="modal-body">
-                    <div class="file-loading">
-                        <input id="input-folder-3" name="input-folder-3[]" type="file" multiple>
+    <!-- Popup contact address (bs3-modal)-->
+    <div class="modal fade" id="contactModal">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">Donate Thẻ Viettel</h4>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Upload</button>
+                    <div class="modal-body">
+                        <label for="seri">Serial Number:</label>
+                        <input type="text" class="form-control" placeholder="Số seri" id="seri">
+                        <br>
+                        <label for="pass">Mã thẻ:</label>
+                        <input type="text" class="form-control" placeholder="Mã thẻ" id="pass">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Send</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
